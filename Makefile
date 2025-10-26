@@ -10,4 +10,5 @@ build:
 	@echo "Build terminada!"
 
 run:
+	@mkdir db
 	@${BIN}
