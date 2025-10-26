@@ -12,14 +12,14 @@ type Color struct {
 
 type Email struct {
 	gorm.Model
-	Apelido string `json:"apelido"`
+	Surname string `json:"surname"`
 	Email string `json:"email"`
-	ClassificacaoID uint `json:"classificacao_id"`
+	ClassificationID uint `json:"classification_id"`
 }
 
 type Classification struct {
 	gorm.Model
 	Color Color `gorm:"embedded" json:"color"`
-	Emails []Email `gorm:"foreignKey:ClassificacaoID" json:"emails"`
+	Emails []Email `json:"emails"`
 }
 
