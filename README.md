@@ -11,3 +11,9 @@
 - Mandar emails
 - Pesquisa
 - Classificação por cor(Você pode criar a classificação) 
+
+## Como rodar
+Rode:
+    make run
+
+Pronto!
