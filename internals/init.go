@@ -10,6 +10,8 @@ import (
 
 func Init(){
 	r := gin.Default()
+
+	configs.InitEnv()
 	configs.Connect()
 
 	r.GET("/",func(ctx *gin.Context) {

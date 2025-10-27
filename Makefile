@@ -10,5 +10,12 @@ build:
 	@echo "Build terminada!"
 
 run:
-	@mkdir db
-	@${BIN}
+	@if [ -d "./db" ]; then \
+		echo "📁 A pasta dist existe!"; \
+		${BIN}; \
+	else \
+		echo "⚠️  A pasta dist não existe!"; \
+		mkdir db; \
+		${BIN}; \
+	fi
+	
