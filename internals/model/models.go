@@ -4,22 +4,17 @@ import (
 	"gorm.io/gorm"
 )
 
-type Color struct {
-	Red uint8 `json:"red"`
-	Green uint8 `json:"green"`
-	Blue uint8 `json:"blue"`
-}
-
 type Email struct {
 	gorm.Model
-	Surname string `json:"surname"`
-	Email string `json:"email"`
-	ClassificationID uint `json:"classification_id"`
+	Surname string `form:"surname"`
+	Email string `form:"email"`
+	ClassificationID uint `form:"classification_id"`
 }
 
 type Classification struct {
 	gorm.Model
-	Color Color `gorm:"embedded" json:"color"`
-	Emails []Email `json:"emails"`
+	Name string
+	Color string `form:"color"`
+	Emails []Email `form:"emails"`
 }
 
